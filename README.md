@@ -14,8 +14,23 @@ Engineer working in AI systems, backend infrastructure, and applied research
 
 ## Working on
 
+**[trust-gate](https://github.com/lzvxck/trust-gate)** `TypeScript`
+Trajectory-aware regression gate for autonomous coding agents. Open-source and self-hostable: Fastify API, Next.js dashboard, MCP server via xmcp, BullMQ/Redis workers, and Postgres with Drizzle. Ships a reusable GitHub Actions check ([trust-gate-demo](https://github.com/lzvxck/trust-gate-demo)) to gate agent-generated PRs end-to-end.
+
+---
+
+**[agent-arena](https://github.com/lzvxck/agent-arena)** `Python`
+Benchmarking platform for autonomous coding agents. Define benchmarks and tasks, run agents in isolated git workspaces, and stream every event live over WebSocket. Trace viewer replays full executions — tool calls, file diffs, stdout/stderr, and token usage with cost breakdown. Claude Code adapter first, extensible to any agent.
+
+---
+
 **[chainforge](https://github.com/lzvxck/chainforge)** `Go`
 Provider-agnostic AI agent framework with zero external dependencies. Sequential, parallel, and router-based orchestration. MCP (HTTP + stdio), vector memory (Qdrant, PostgreSQL, Redis), tool memoization, Prometheus metrics, and OpenTelemetry tracing. Swap Anthropic, OpenAI, Ollama, or Gemini with one line.
+
+---
+
+**[dense-retrieval-ft](https://github.com/lzvxck/dense-retrieval-ft)** `Python`
+Fine-tuned BGE-M3 with LoRA for domain-specific dense retrieval on a single consumer GPU. Synthetic query generation and hard-negative mining pipeline, contrastive training, and retrieval evaluation against the base model.
 
 ---
 
@@ -39,26 +54,6 @@ TurboQuant KV cache compression — 4× size reduction with near-zero quality lo
 
 ---
 
-**[marl-drone-swarm-rl](https://github.com/lzvxck/marl-drone-swarm-rl)** `Python`
-Multi-agent reinforcement learning for cooperative quadcopter swarm control. MAPPO with centralized critic and shared actor. Curriculum learning from 3 drones on 10×10 grids to 6 drones on 20×20. Physics simulation via PyBullet, PettingZoo multi-agent wrapper.
-
----
-
-**[autonomous-ml-researcher](https://github.com/lzvxck/autonomous-ml-researcher)** `Python`
-Agentic framework for autonomous ML research. Agent reads a program file, forms hypotheses, modifies training code (one change per experiment for strict causality), runs 5-minute cycles, logs to SQLite, and regenerates its own memory for the next iteration. Agent-agnostic — works with any CLI tool.
-
----
-
-**[soc-multi-agent-system](https://github.com/lzvxck/soc-multi-agent-system)** `Python`
-AI-driven SOC orchestration. Six specialized agents — supervisor, context enrichment, behavioral analysis, investigation, response, and communication — coordinate to investigate security alerts, map to MITRE ATT&CK, and generate remediation reports. Built with LangGraph and MCP.
-
----
-
-**[prompt-version-hub](https://github.com/lzvxck/prompt-version-hub)** `TypeScript`
-Platform for versioning, testing, and deploying prompts across environments. Git-style diffs, one-click rollback, A/B testing with deterministic user-segment routing, AI-powered test case generation, and an analytics dashboard tracking usage, latency, and cost. Role-based access control with public/private visibility.
-
----
-
 **[rl-framework-qwen3.5-2B](https://github.com/lzvxck/rl-framework-qwen3.5-2B)** `Python`
 Full SFT + GRPO reinforcement learning pipeline for reasoning on Qwen3.5-2B. QLoRA 4-bit quantization fits on 12GB VRAM. Self-improvement loop: generates reasoning traces, filters top performers, augments the dataset, and repeats. Evaluated on math and code benchmarks with structured `<think>` chain-of-thought.
 
@@ -66,6 +61,11 @@ Full SFT + GRPO reinforcement learning pipeline for reasoning on Qwen3.5-2B. QLo
 
 **[autonomous-sae-researcher](https://github.com/lzvxck/autonomous-sae-researcher)** `Python`
 Autonomous hyperparameter search for Sparse Autoencoders on Qwen3.5-0.8B activations. Agent forms hypotheses, runs training cycles, logs to SQLite, and generates its own leaderboard and state summary for the next iteration. Best result: 0.9956 explained variance at 12.5% feature activation.
+
+---
+
+**[marl-drone-swarm-rl](https://github.com/lzvxck/marl-drone-swarm-rl)** `Python`
+Multi-agent reinforcement learning for cooperative quadcopter swarm control. MAPPO with centralized critic and shared actor. Curriculum learning from 3 drones on 10×10 grids to 6 drones on 20×20. Physics simulation via PyBullet, PettingZoo multi-agent wrapper.
 
 ---
 
@@ -94,6 +94,7 @@ LLM-powered pipeline that converts raw documents (PDF, DOCX, HTML, Markdown, sou
 **Backend**
 
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
+![Fastify](https://img.shields.io/badge/Fastify-000000?style=for-the-badge&logo=fastify&logoColor=white)
 ![NestJS](https://img.shields.io/badge/NestJS-E0234E?style=for-the-badge&logo=nestjs&logoColor=white)
 ![Gin](https://img.shields.io/badge/Gin-00ADD8?style=for-the-badge&logo=go&logoColor=white)
 ![Celery](https://img.shields.io/badge/Celery-37814A?style=for-the-badge&logo=celery&logoColor=white)
