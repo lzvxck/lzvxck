@@ -15,63 +15,43 @@ Engineer working in AI systems, backend infrastructure, and applied research
 
 ## Working on
 
+**[seri-agent](https://github.com/lzvxck/seri-agent)** `TypeScript`
+Cross-platform coding-agent CLI, shipped as a single dependency-free binary on Bun — no runtime to install. Code-first today, architected to grow into general-purpose assistant work — the foundation of my upcoming startup.
+
+---
+
 **[trust-gate](https://github.com/lzvxck/trust-gate)** `TypeScript`
-Trajectory-aware regression gate for autonomous coding agents. Open-source and self-hostable: Fastify API, Next.js dashboard, MCP server via xmcp, BullMQ/Redis workers, and Postgres with Drizzle. Ships a reusable GitHub Actions check ([trust-gate-demo](https://github.com/lzvxck/trust-gate-demo)) to gate agent-generated PRs end-to-end.
+Trajectory-aware regression gate for autonomous coding agents. Open-source and self-hostable, with a reusable GitHub Actions check ([trust-gate-demo](https://github.com/lzvxck/trust-gate-demo)) to gate agent-generated PRs end-to-end.
 
 ---
 
 **[agent-arena](https://github.com/lzvxck/agent-arena)** `Python`
-Benchmarking platform for autonomous coding agents. Define benchmarks and tasks, run agents in isolated git workspaces, and stream every event live over WebSocket. Trace viewer replays full executions — tool calls, file diffs, stdout/stderr, and token usage with cost breakdown. Claude Code adapter first, extensible to any agent.
+Benchmarking platform for autonomous coding agents. Runs agents in isolated git workspaces and streams every tool call, diff, and cost live over WebSocket, with a full trace replay viewer.
+
+---
+
+**[attention-router](https://github.com/lzvxck/attention-router)** `TypeScript`
+GitHub App that scores every PR into a risk tier (auto-mergeable / quick-glance / deep-review), calibrated against that specific repo's real revert history. Live dashboard shows calibration improving from actual outcomes.
 
 ---
 
 **[chainforge](https://github.com/lzvxck/chainforge)** `Go`
-Provider-agnostic AI agent framework with zero external dependencies. Sequential, parallel, and router-based orchestration. MCP (HTTP + stdio), vector memory (Qdrant, PostgreSQL, Redis), tool memoization, Prometheus metrics, and OpenTelemetry tracing. Swap Anthropic, OpenAI, Ollama, or Gemini with one line.
-
----
-
-**[dense-retrieval-ft](https://github.com/lzvxck/dense-retrieval-ft)** `Python`
-Fine-tuned BGE-M3 with LoRA for domain-specific dense retrieval on a single consumer GPU. Synthetic query generation and hard-negative mining pipeline, contrastive training, and retrieval evaluation against the base model.
-
----
-
-**[etip](https://github.com/lzvxck/etip)** `Python · TypeScript`
-Enterprise Talent Intelligence Platform. Ingests GitHub and Jira activity, infers skills against the ESCO taxonomy, and ranks candidates via vector similarity + cross-encoder reranking + LLM explanations. Multi-tenant with PostgreSQL Row-Level Security, pgvector, Celery workers, and Qdrant.
+Provider-agnostic AI agent framework with zero external dependencies. Sequential/parallel/router orchestration, MCP, vector memory, and OpenTelemetry tracing — swap Anthropic, OpenAI, Ollama, or Gemini in one line.
 
 ---
 
 **[websearch-ng](https://github.com/lzvxck/websearch-ng)** `Python · TypeScript`
-Self-hosted AI search engine. Parallel web search, Jina extraction, semantic reranking, and cited answers streamed token-by-token over SSE. Two modes: fast search (3 queries) and deep research (7 queries + gap analysis + structured report). Multi-provider via LiteLLM.
+Self-hosted AI search engine with cited answers streamed token-by-token over SSE. Fast mode (3 queries) or deep research mode (7 queries + gap analysis), multi-provider via LiteLLM.
 
 ---
 
 **[gpt-sota-opt](https://github.com/lzvxck/gpt-sota-opt)** `Python`
-Production GPT implementation with GQA (25–30% faster inference, 66% smaller KV cache), FlashAttention-2, RMSNorm, SwiGLU, and RoPE. Scales from 10M to 500M parameters. 6,000–7,000 tokens/sec on RTX 5070 with BF16 and gradient checkpointing.
+Production GPT implementation with GQA, FlashAttention-2, RMSNorm, SwiGLU, and RoPE — 25–30% faster inference, 66% smaller KV cache, 6,000–7,000 tok/s on an RTX 5070.
 
 ---
 
 **[turboquant-implementation](https://github.com/lzvxck/turboquant-implementation)** `Python`
-TurboQuant KV cache compression — 4× size reduction with near-zero quality loss. RHT + Lloyd-Max quantization encoded at 3–4 bits. Custom Triton GPU kernels: ~9× faster quantization, ~5× faster dequantization. Validated on Llama-3.2-3B: +2.2% perplexity, 100% needle accuracy.
-
----
-
-**[rl-framework-qwen3.5-2B](https://github.com/lzvxck/rl-framework-qwen3.5-2B)** `Python`
-Full SFT + GRPO reinforcement learning pipeline for reasoning on Qwen3.5-2B. QLoRA 4-bit quantization fits on 12GB VRAM. Self-improvement loop: generates reasoning traces, filters top performers, augments the dataset, and repeats. Evaluated on math and code benchmarks with structured `<think>` chain-of-thought.
-
----
-
-**[autonomous-sae-researcher](https://github.com/lzvxck/autonomous-sae-researcher)** `Python`
-Autonomous hyperparameter search for Sparse Autoencoders on Qwen3.5-0.8B activations. Agent forms hypotheses, runs training cycles, logs to SQLite, and generates its own leaderboard and state summary for the next iteration. Best result: 0.9956 explained variance at 12.5% feature activation.
-
----
-
-**[marl-drone-swarm-rl](https://github.com/lzvxck/marl-drone-swarm-rl)** `Python`
-Multi-agent reinforcement learning for cooperative quadcopter swarm control. MAPPO with centralized critic and shared actor. Curriculum learning from 3 drones on 10×10 grids to 6 drones on 20×20. Physics simulation via PyBullet, PettingZoo multi-agent wrapper.
-
----
-
-**[data-curation-engine](https://github.com/lzvxck/data-curation-engine)** `Python`
-LLM-powered pipeline that converts raw documents (PDF, DOCX, HTML, Markdown, source code) into training-ready JSONL datasets. Six-stage pipeline: parse → chunk → generate instructions → rule filter → LLM judge (position-swap bias detection) → output. Multi-provider via LiteLLM. Resumable.
+TurboQuant KV cache compression: 4× size reduction via custom Triton GPU kernels (~9× faster quantization), near-zero quality loss validated on Llama-3.2-3B.
 
 ---
 
