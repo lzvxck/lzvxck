@@ -20,16 +20,6 @@ Cross-platform coding-agent CLI, shipped as a single dependency-free binary on B
 
 ---
 
-**[trust-gate](https://github.com/lzvxck/trust-gate)** `TypeScript`
-Trajectory-aware regression gate for autonomous coding agents. Open-source and self-hostable, with a reusable GitHub Actions check ([trust-gate-demo](https://github.com/lzvxck/trust-gate-demo)) to gate agent-generated PRs end-to-end.
-
----
-
-**[agent-arena](https://github.com/lzvxck/agent-arena)** `Python`
-Benchmarking platform for autonomous coding agents. Runs agents in isolated git workspaces and streams every tool call, diff, and cost live over WebSocket, with a full trace replay viewer.
-
----
-
 **[attention-router](https://github.com/lzvxck/attention-router)** `TypeScript`
 GitHub App that scores every PR into a risk tier (auto-mergeable / quick-glance / deep-review), calibrated against that specific repo's real revert history. Live dashboard shows calibration improving from actual outcomes.
 
@@ -43,15 +33,6 @@ Provider-agnostic AI agent framework with zero external dependencies. Sequential
 **[websearch-ng](https://github.com/lzvxck/websearch-ng)** `Python · TypeScript`
 Self-hosted AI search engine with cited answers streamed token-by-token over SSE. Fast mode (3 queries) or deep research mode (7 queries + gap analysis), multi-provider via LiteLLM.
 
----
-
-**[gpt-sota-opt](https://github.com/lzvxck/gpt-sota-opt)** `Python`
-Production GPT implementation with GQA, FlashAttention-2, RMSNorm, SwiGLU, and RoPE — 25–30% faster inference, 66% smaller KV cache, 6,000–7,000 tok/s on an RTX 5070.
-
----
-
-**[turboquant-implementation](https://github.com/lzvxck/turboquant-implementation)** `Python`
-TurboQuant KV cache compression: 4× size reduction via custom Triton GPU kernels (~9× faster quantization), near-zero quality loss validated on Llama-3.2-3B.
 
 ---
 
