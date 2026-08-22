@@ -16,7 +16,7 @@ Engineer working in AI systems, backend infrastructure, and applied research
 ## Working on
 
 **[seri-agent](https://github.com/lzvxck/seri-agent)** `TypeScript`
-Cross-platform coding-agent CLI, shipped as a single dependency-free binary on Bun — no runtime to install. Code-first today, architected to grow into general-purpose assistant work — the foundation of my upcoming startup.
+Cross-platform coding-agent CLI, shipped as a single dependency-free binary on Bun — no runtime to install. Code-first today, architected to grow into general-purpose assistant work.
 
 ---
 
